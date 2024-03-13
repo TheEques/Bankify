@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        /* background-color: black; */
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Add padding to containers */
+
+      /* Full-width input fields */
+      input[type="text"],
+      input[type="number"] {
+        width: 100%;
+        padding: 15px;
+        margin: 5px 0 22px 0;
+        display: inline-block;
+        border: none;
+        background: #f1f1f1;
+      }
+
+      input[type="text"]:focus input[type="number"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+
+      /* Overwrite default styles of hr */
+      hr {
+        border: 1px solid #f1f1f1;
+        margin-bottom: 25px;
+      }
+
+      /* Set a style for the submit button */
+      .registerbtn {
+        background-color: rgb(141, 47, 224);
+        color: white;
+        padding: 16px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+      }
+
+      .registerbtn:hover {
+        opacity: 1;
+      }
+
+      .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+        margin: 10px 10px;
+        padding: 10px 10px;
+      }
+
+      .form-group select {
+        /* display: flex ;
+    flex-wrap: wrap; */
+        margin: 10px 10px;
+        padding: 10px 10px;
+      }
+      .container {
+        padding: 16px;
+        /* background-color: white; */
+        border: 2px solid black;
+      }
+      /* Add a blue text color to links */
+      a {
+        color: dodgerblue;
+      }
+
+      /* Set a grey background color and center the text of the "sign in" section */
+      .signin {
+        background-color: #f1f1f1;
+        text-align: center;
+      }
+      .center {
+        text-align: center;
+      }
+      h1 {
+        text-decoration: underline overline;
+      }
+      /* .container-fluid{
+            padding:10px 10px;
+            margin:10px 10px;
+        } */
+      .navbar {
+        background-color: rgba(14, 14, 235, 0.685);
+        padding: 15px 60px;
+        margin: 0px 0px;
+      }
+    </style>
+    <title>Loan Approval Prediction</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <!-- <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                aria-current="page"
+                href="http://localhost:3000/index1.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Personal Information</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Banking</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Loan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                >Credit Card</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <section class="form-group">
+      <form action="/predict" method="post">
+        <div class="container">
+          <h1 class="center">LoanPredictO</h1>
+
+          <label for="gender">Gender:</label>
+          <select name="gender" id="gender">
+            <option value="1">Male</option>
+            <option value="0">Female</option></select
+          ><br />
+
+          <label for="married">Married:</label>
+          <select name="married" id="married">
+            <option value="1">Married</option>
+            <option value="0">Unmarried</option></select
+          ><br />
+
+          <label for="education">Education:</label>
+          <select name="education" id="education">
+            <option value="1">Graduated</option>
+            <option value="0">Un-Graduated</option></select
+          ><br />
+
+          <label for="self_employed">Self Employed:</label>
+          <select name="self_employed" id="self_employed">
+            <option value="1">Yes</option>
+            <option value="0">No</option></select
+          ><br />
+
+          <label for="dependents">Dependents:</label>
+          <!-- <select name="dependents" id="dependents">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select><br> -->
+          <input type="number" name="dependents" id="dependents" /><br />
+
+          <label for="applicant_income">Applicant Income:</label>
+          <input
+            type="number"
+            name="applicant_income"
+            id="applicant_income"
+          /><br />
+
+          <label for="coapplicant_income">Coapplicant Income:</label>
+          <input
+            type="number"
+            name="coapplicant_income"
+            id="coapplicant_income"
+          /><br />
+
+          <label for="loan_amount">Loan Amount:</label>
+          <input type="number" name="loan_amount" id="loan_amount" /><br />
+
+          <label for="loan_amount_term">Loan Amount Term (in months):</label>
+          <input
+            type="number"
+            name="loan_amount_term"
+            id="loan_amount_term"
+          /><br />
+
+          <label for="credit_history">Credit History:</label>
+          <span>{{ credit_history }}</span>
+          <!-- Display credit history here -->
+
+          <!-- Hidden input for credit history -->
+          <input
+            type="hidden"
+            name="credit_history"
+            value="{{ credit_history }}"
+          />
+
+          <br />
+
+          <br />
+          <label for="property_area">Property Area:</label>
+          <select name="property_area" id="property_area">
+            <option value="0">Rural</option>
+            <option value="1">Semi-Urban</option>
+            <option value="2">Urban</option></select
+          ><br />
+
+          <input
+            type="submit"
+            class="registerbtn"
+            value="Predict Loan Approval"
+          />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>

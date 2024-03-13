@@ -1,0 +1,265 @@
+/* Small Laptops (768px - 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+/* Tablets (480px - 767px) */
+@media (max-width: 59em) {
+  .main-nav {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    transform: translateX(100%);
+
+    /* hidding */
+    /* hide it visually */
+    opacity: 0;
+    /* unaccessible to mouse and keyboard */
+    pointer-events: none;
+    /* hide it from screen readers */
+    visibility: hidden;
+  }
+
+  .btn-mob-nav {
+    display: block;
+    z-index: 9999;
+  }
+  .nav-open .main-nav {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .nav-open .icon-mob[name="close-outline"] {
+    display: block;
+  }
+
+  .nav-open .icon-mob[name="menu-outline"] {
+    display: none;
+  }
+  .main-heading {
+    color: #333;
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-top: -38rem;
+    width: 32rem;
+  }
+  .main-heading span {
+    color: #333;
+    /* color: #555; */
+    font-size: 1.8rem;
+    color: #1057c0;
+    font-weight: 700;
+  }
+  .hero-icon {
+    height: 2rem;
+    width: 2rem;
+    color: #1057c0;
+  }
+}
+
+/* Mobile Phones (up to 479px) */
+@media only screen and (min-width: 600px) and (max-width: 900px),
+  only screen and (max-width: 599px) {
+  .main-heading {
+    color: #333;
+    font-size: 1.8rem;
+    margin-left: 2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    margin-top: -38rem;
+    width: 36rem;
+    padding-right: 2rem;
+    line-height: 3rem;
+  }
+  .main-heading span {
+    color: #333;
+    /* color: #555; */
+    font-size: 1.8rem;
+    color: #1057c0;
+    font-weight: 700;
+  }
+  .hero-icon {
+    height: 0rem;
+    width: 0rem;
+    color: #1057c0;
+  }
+  .acc-card {
+    height: 40rem;
+    width: 32rem;
+    /* background-color: aqua; */
+    margin-left: 2rem;
+    margin-top: 2rem;
+    border-radius: 4rem;
+    background-color: #e0e3e5;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  .acc-heading {
+    color: #e74c3c;
+    font-size: 2.6rem;
+    text-decoration: underline;
+    font-weight: 600;
+    margin-left: 6rem;
+    padding-top: 3.9rem;
+    margin-bottom: 1rem;
+  }
+  .acc-tag {
+    color: #333333;
+    font-size: 1.6rem;
+    margin-left: 2rem;
+    padding-top: 2.2rem;
+    font-weight: 600;
+
+    margin-bottom: 2rem;
+  }
+  .acc-heading1 {
+    color: white;
+    font-size: 2.2rem;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 2rem;
+    margin-top: 4.9rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    height: 2rem;
+    /* background-color: #156df1; */
+    width: 40rem;
+  }
+
+  .credit-head {
+    height: 4rem;
+    background-color: #e74c3c;
+    width: 20rem;
+    margin-left: 2rem;
+  }
+  .credit-head1 {
+    height: 4rem;
+    background-color: #e74c3c;
+    width: 25rem;
+    margin-left: 2rem;
+  }
+  .credit-card {
+    height: 23rem;
+    width: 34rem;
+    background-color: #dfe6e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    margin-left: 2rem;
+    margin-top: 2.8rem;
+  }
+  .deposit {
+    height: 17rem;
+    width: 34rem;
+    background-color: #dfe6e9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-radius: 2rem;
+    margin-left: 2rem;
+    margin-top: 2.8rem;
+  }
+  .card-text {
+    font-size: 1.4rem;
+    font-family: sans-serif;
+    width: 33rem;
+    line-height: 1.4;
+    padding-left: 2rem;
+    margin-top: 1rem;
+  }
+  .credit-card-heading {
+    font-size: 2rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #1057c0;
+    padding-top: 1.4rem;
+    padding-left: 2rem;
+  }
+  .btn {
+    margin-top: 1rem;
+    margin-left: 10rem;
+  }
+  .btn1 {
+    margin-top: 1rem;
+    margin-left: 8rem;
+  }
+  .btn2 {
+    margin-top: 2rem;
+    margin-left: 8rem;
+    /* margin-bottom: -18rem; */
+  }
+  .nav-cta1 {
+    margin-left: 0rem;
+  }
+  .profile-card {
+    height: 10rem;
+    width: 34rem;
+    background-color: #dfe6e9;
+    border-radius: 4rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .profile-card1 {
+    height: 10rem;
+    width: 34rem;
+    background-color: #dfe6e9;
+    border-radius: 4rem;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  .credit-card-heading1 {
+    font-size: 1.8rem;
+    font-family: sans-serif;
+    font-weight: 700;
+    color: #1057c0;
+    padding-top: 1.4rem;
+    padding-left: 3rem;
+  }
+  .nav-cta2 {
+    margin-left: 4rem;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+  }
+  .btn3 {
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+  .logout {
+    height: 6rem;
+    width: 16rem;
+    border-radius: 4rem;
+    background-color: #e74c3c;
+    margin-top: 4rem;
+    margin-left: 10rem;
+  }
+  .icon-mob {
+    height: 4rem;
+    width: 4rem;
+    color: #333;
+    margin-right: -2.4rem;
+  }
+  .logo {
+    width: 140px; /* Adjust as needed */
+    height: 6rem;
+    margin-left: -2rem;
+  }
+  .main-nav-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .user {
+    height: 5rem;
+    width: 5rem;
+    margin-left: 5rem;
+    margin-top: 5rem;
+  }
+}
